@@ -9,6 +9,9 @@ import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
 import io.dropwizard.configuration.SubstitutingSourceProvider;
 
 import io.dropwizard.setup.Bootstrap;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.ListUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.NetworkConnector;
@@ -133,13 +136,13 @@ public class NlpMicroService extends Application<NlpConfiguration> {
      */
     private int getPort() {
         Connector[] connectors = environment.getApplicationContext().getServer().getConnectors();
-        if (connectors != null) {
-            for (Connector connector : connectors) {
-                if (connector instanceof NetworkConnector) {
-                    return ((NetworkConnector)connector).getLocalPort();
-                }
+
+        for (Connector connector : ArrayUtils.nullToEmpty(connectors, Connector[].class)) {
+            if (connector instanceof NetworkConnector) {
+                return ((NetworkConnector) connector).getLocalPort();
             }
         }
+
         return 0;
     }
 
@@ -149,16 +152,16 @@ public class NlpMicroService extends Application<NlpConfiguration> {
      */
     private int getAdminPort() {
         Connector[] connectors = environment.getAdminContext().getServer().getConnectors();
-        if (connectors != null) {
-            int i = 0;
-            for (Connector connector : connectors) {
-                if (connector instanceof NetworkConnector) {
-                    if (++i == 2) {
-                        return ((NetworkConnector)connector).getLocalPort();
-                    }
+
+        int i = 0;
+        for (Connector connector : ArrayUtils.nullToEmpty(connectors, Connector[].class)) {
+            if (connector instanceof NetworkConnector) {
+                if (++i == 2) {
+                    return ((NetworkConnector) connector).getLocalPort();
                 }
             }
         }
+
         return 0;
     }
 

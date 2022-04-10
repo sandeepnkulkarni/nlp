@@ -1,9 +1,9 @@
 package com.veritas.nlp.service;
 
 import io.dropwizard.setup.Environment;
-import io.federecio.dropwizard.swagger.ConfigurationHelper;
-import io.federecio.dropwizard.swagger.SwaggerBundle;
-import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
+import in.vectorpro.dropwizard.swagger.ConfigurationHelper;
+import in.vectorpro.dropwizard.swagger.SwaggerBundle;
+import in.vectorpro.dropwizard.swagger.SwaggerBundleConfiguration;
 
 import org.apache.commons.lang3.StringUtils;
 

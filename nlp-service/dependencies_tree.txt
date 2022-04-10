@@ -1,4 +1,4 @@
-com.veritas.nlp:nlp-service:jar:0.1.7-SNAPSHOT
+com.veritas.nlp:nlp-service:jar:0.1.8-SNAPSHOT
 +- edu.stanford.nlp:stanford-corenlp:jar:4.4.0:compile
 |  +- com.apple:AppleJavaExtensions:jar:1.4:compile
 |  +- de.jollyday:jollyday:jar:0.4.9:compile
@@ -105,20 +105,19 @@ com.veritas.nlp:nlp-service:jar:0.1.7-SNAPSHOT
 |  +- org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:jar:2.33:test
 |  +- jakarta.activation:jakarta.activation-api:jar:1.2.2:runtime
 |  \- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:runtime
-+- com.smoketurner:dropwizard-swagger:jar:2.0.0-1:compile
++- in.vectorpro.dropwizard:dropwizard-swagger:jar:2.0.28-1:compile
+|  +- io.dropwizard:dropwizard-views:jar:2.0.28:compile
+|  +- io.dropwizard:dropwizard-assets:jar:2.0.28:compile
 |  +- io.dropwizard:dropwizard-auth:jar:2.0.28:compile
 |  |  \- io.dropwizard.metrics:metrics-caffeine:jar:4.1.29:compile
-|  +- io.dropwizard:dropwizard-assets:jar:2.0.28:compile
-|  +- io.dropwizard:dropwizard-views:jar:2.0.28:compile
 |  +- io.dropwizard:dropwizard-views-freemarker:jar:2.0.28:compile
 |  |  \- org.freemarker:freemarker:jar:2.3.31:compile
-|  \- io.swagger:swagger-jersey2-jaxrs:jar:1.6.0:compile
-|     \- io.swagger:swagger-jaxrs:jar:1.6.0:compile
-|        +- io.swagger:swagger-core:jar:1.6.0:compile
-|        |  +- io.swagger:swagger-models:jar:1.6.0:compile
-|        |  |  \- io.swagger:swagger-annotations:jar:1.6.0:compile
-|        |  \- javax.validation:validation-api:jar:1.1.0.Final:compile
-|        \- org.reflections:reflections:jar:0.9.11:compile
+|  +- in.vectorpro.dropwizard:dropwizard-swagger-ui:jar:4.6.2:compile
+|  \- io.swagger.core.v3:swagger-jaxrs2:jar:2.1.13:compile
+|     +- io.github.classgraph:classgraph:jar:4.8.138:compile
+|     +- io.swagger.core.v3:swagger-models:jar:2.1.13:compile
+|     \- io.swagger.core.v3:swagger-integration:jar:2.1.13:compile
+|        \- io.swagger.core.v3:swagger-core:jar:2.1.13:compile
 +- org.eclipse.jetty:jetty-server:jar:9.4.44.v20210927:compile
 |  \- org.eclipse.jetty:jetty-http:jar:9.4.44.v20210927:compile
 +- org.eclipse.jetty:jetty-servlet:jar:9.4.44.v20210927:compile

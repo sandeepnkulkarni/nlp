@@ -3,7 +3,7 @@ package com.veritas.nlp.service;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.dropwizard.Configuration;
-import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
+import in.vectorpro.dropwizard.swagger.SwaggerBundleConfiguration;
 
 public class NlpConfiguration extends Configuration {
     @JsonProperty("swagger")

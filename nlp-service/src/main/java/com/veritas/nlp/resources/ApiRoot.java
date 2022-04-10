@@ -1,8 +1,8 @@
 package com.veritas.nlp.resources;
 
-import io.federecio.dropwizard.swagger.SwaggerOAuth2Configuration;
-import io.federecio.dropwizard.swagger.SwaggerResource;
-import io.federecio.dropwizard.swagger.SwaggerViewConfiguration;
+import in.vectorpro.dropwizard.swagger.SwaggerOAuth2Configuration;
+import in.vectorpro.dropwizard.swagger.SwaggerResource;
+import in.vectorpro.dropwizard.swagger.SwaggerViewConfiguration;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.HEAD;
